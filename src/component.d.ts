@@ -5,7 +5,13 @@ export interface ComponentProps {
    * The text to display in the component.
    * @default 'Hello!'
    */
-  text: string;
+  content: string;
+
+  /**
+   * Whether the component is disabled.
+   * @default false
+   */
+  disabled: boolean;
 }
 
 export default class Component extends SvelteComponent<

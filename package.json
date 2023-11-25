@@ -1,6 +1,6 @@
 {
   "name": "@svelte-plugins/svelte-component-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "description": "A Svelte seed project for creating components.",
   "author": "Kieran Boyle (https://github.com/dysfunc)",
@@ -17,7 +17,7 @@
   "homepage": "@svelte-plugins/svelte-component-template",
   "bugs": "@svelte-plugins/svelte-component-template/issues",
   "keywords": [
-    "components",
+    "library",
     "component",
     "template",
     "seed",
@@ -31,12 +31,18 @@
     "/dist"
   ],
   "scripts": {
+    "preinstall": "npm --prefix ./docs install",
+    "start": "vite & npm --prefix ./docs run dev",
     "dev": "vite",
-    "bundle": "vite build",
-    "deploy": "npx gh-pages -d docs/build",
+    "build": "vite build",
+    "build:docs": "npm --prefix ./docs run build",
+    "deploy": "npm run build:docs && npx gh-pages -d docs/build",
+    "publish": "npm run build && npm publish --access=public",
     "lint": "eslint -c ./.eslintrc.json --fix \"src/**/*.{.js,svelte}\"",
     "format": "prettier --write \"src/**/*.{js,json,svelte}\"",
-    "test": "vitest --run --coverage"
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest --run --coverage && open ./coverage/index.html"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",
@@ -63,7 +69,10 @@
   "exports": {
     ".": {
       "types": "./src/index.d.ts",
-      "svelte": "./src/index.js"
+      "svelte": "./src/index.js",
+      "require": "./dist/index.js",
+      "module": "./dist/index.mjs",
+      "default": "./src/index.js"
     }
   }
 }
