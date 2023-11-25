@@ -22,6 +22,9 @@ export default defineConfig(({ command, mode }) => {
     },
     plugins: [
       svelte()
-    ]
+    ],
+    server: {
+      open: true
+    }
   }
 })
