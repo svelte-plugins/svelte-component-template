@@ -14,7 +14,7 @@ A Svelte seed project for creating components.
 > npm start
 ```
 
-## Setting up development envirnoment
+## Setting up development environment
 
 1. Install dependencies
 
