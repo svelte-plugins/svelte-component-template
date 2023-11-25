@@ -9,13 +9,13 @@ describe('Component', () => {
   });
 
   it('should render the component', () => {
-    const { container } = TestHarness({ text: 'Hello World' });
+    const { container } = TestHarness({ content: 'Hello World' });
     expect(container).toMatchSnapshot();
   });
 
-  it('should render the correct text value', () => {
-    const { component, container } = TestHarness({ text: 'Mahalo!' });
+  it('should render the correct content value', () => {
+    const { component, container } = TestHarness({ content: 'Mahalo!' });
     expect(container.innerHTML).toMatch('Mahalo!');
-    expect(component.text).toBe('Mahalo!');
+    expect(component.content).toBe('Mahalo!');
   });
 });

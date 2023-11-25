@@ -3,11 +3,11 @@
 exports[`Component > should render the component 1`] = `
 <body>
   <div>
-    <div
-      class="component svelte-1ieplvx"
+    <button
+      class="component svelte-1eibeh7"
     >
       Hello World
-    </div>
+    </button>
     <!--&lt;Component&gt;-->
   </div>
 </body>
