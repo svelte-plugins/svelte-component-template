@@ -31,8 +31,7 @@
     "/dist"
   ],
   "scripts": {
-    "preinstall": "npm --prefix ./docs install",
-    "start": "vite & npm --prefix ./docs run dev",
+    "start": "npm --prefix ./docs install && vite & npm --prefix ./docs run dev",
     "dev": "vite",
     "build": "vite build",
     "build:docs": "npm --prefix ./docs run build",
