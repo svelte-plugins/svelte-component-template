@@ -1,6 +1,10 @@
 <script>
   import { Component } from '@svelte-plugins/svelte-component-template';
   import Prism from 'svelte-prismjs';
+
+  const handleClick = () => {
+    console.log('clicked');
+  }
 </script>
 
 <main>
@@ -14,7 +18,7 @@
   <section>
     <h2>Overview</h2>
 
-    The <code>Component</code> is a user-friendly interactive component that provides the user with immediate feedback.
+    The <code>Component</code> is a user-friendly interactive element that provides the user with immediate feedback.
 
     <div class="showcase">
       <Component content="Hi!" />
@@ -22,7 +26,7 @@
   </section>
 
   <section>
-    <h2>Props</h2>
+    <h3>Props</h3>
 
     <table class="table">
       <tr>
@@ -32,9 +36,9 @@
         <th>Default</th>
       </tr>
       <tr>
-        <td>content</td>
+        <td>empty</td>
         <td><code>string</code></td>
-        <td>The text you want to render.</td>
+        <td>The text to display in the default slot.</td>
         <td><code>Hello</code></td>
       </tr>
       <tr>
@@ -47,28 +51,59 @@
   </section>
 
   <section>
-    <h2>Examples</h2>
-    <p>Below are examples explaining how to use key properties and functionality.</p>
+    <h3>Events</h3>
 
-    <h3>Standard</h3>
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>on:click</td>
+        <td><code>string</code></td>
+        <td>The callback handler to bind to the <code>on:click</code> event.</td>
+        <td>
+          <code>
+            {`<Component on:click={handleClick} />`}
+          </code>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Examples</h2>
+    <p>Below are examples showcasing different features, states and renderings.</p>
+
+    <h3>Normal</h3>
 
     <div class="example">
-      <Component content="Hi!" />
+      <Component on:click={handleClick}>Hello There!</Component>
 
-      <Prism showLineNumbers={true} code={`<Component content="Hi!" />`} />
+      <Prism showLineNumbers={true} code={`<Component>Hello There!</Component>`} />
     </div>
 
     <h3>Disabled</h3>
 
     <div class="example">
-      <Component content="Hello, there!" disabled />
-      <Prism showLineNumbers={true} code={`<Component content="Hello, there!" disabled />`} />
+      <Component disabled>Disabled</Component>
+      <Prism showLineNumbers={true} code={`<Component disabled>Disabled</Component>`} />
+    </div>
+
+    <h3>Empty</h3>
+
+    <div class="example">
+      <Component />
+      <Prism showLineNumbers={true} code={`<Component />`} />
     </div>
   </section>
 </main>
 
 <style>
 	main {
+    color: #21333d;
 		padding: 48px;
 	}
 
@@ -91,11 +126,15 @@
 	}
 
   section {
-    margin: 24px 0;
+    margin: 48px 0;
   }
 
   section h1 {
     display: inline-block;
+	}
+
+  section h3 {
+    color: #304e60;
 	}
 
   .showcase {

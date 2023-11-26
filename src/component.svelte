@@ -1,10 +1,24 @@
 <script>
-  export let content = 'Hello!';
+  // @ts-check
+  /**
+   * The text to display in the default slot.
+   *
+   * @type {string}
+   * @default 'Empty'
+   */
+  export let placeholder = 'Empty';
+
+  /**
+   * The disabled state of the component.
+   *
+   * @type {boolean}
+   * @default false
+   */
   export let disabled = false;
 </script>
 
-<button class="component" {disabled} {...$$restProps}>
-  {content}
+<button class="component" on:click {disabled} {...$$restProps}>
+  <slot>{placeholder}</slot>
 </button>
 
 <style>
