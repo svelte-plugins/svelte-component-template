@@ -129,6 +129,11 @@
     margin: 48px 0;
   }
 
+  section:first-child {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
   section h1 {
     display: inline-block;
 	}
