@@ -1,5 +1,5 @@
 import { render } from '@testing-library/svelte';
-import { Component } from './index';
+import Component from './component.test.svelte';
 
 describe('Component', () => {
   let TestHarness;
@@ -9,7 +9,7 @@ describe('Component', () => {
   });
 
   it('should render the component', () => {
-    const { container } = TestHarness({ content: 'Hello World' });
+    const { container } = TestHarness();
     expect(container).toMatchSnapshot();
   });
 
@@ -17,5 +17,6 @@ describe('Component', () => {
     const { component, container } = TestHarness({ content: 'Mahalo!' });
     expect(container.innerHTML).toMatch('Mahalo!');
     expect(component.content).toBe('Mahalo!');
+    expect(container).toMatchSnapshot();
   });
 });
