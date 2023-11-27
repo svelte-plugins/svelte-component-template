@@ -8,10 +8,10 @@
 </script>
 
 <main>
-	<section>
-		<h1>@svelte-plugins/svelte-component-template <a href="https://github.com/dysfunc">(dysfunc)</a></h1>
-		<p>A Svelte component template seed project.</p>
-	</section>
+  <section>
+    <h1>@svelte-plugins/svelte-component-template <a href="https://github.com/dysfunc">(dysfunc)</a></h1>
+    <p>A Svelte component template seed project.</p>
+  </section>
 
   <hr />
 
@@ -102,28 +102,28 @@
 </main>
 
 <style>
-	main {
+  main {
     color: #21333d;
-		padding: 48px;
-	}
+    padding: 48px;
+  }
 
   h1 {
     display: inline-block;
-		margin: 0;
-		padding: 0;
+    margin: 0;
+    padding: 0;
   }
 
-	hr {
-		border: 0;
-		border-bottom: 1px solid #ddd;
-		height: 1px;
-	}
+  hr {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    height: 1px;
+  }
 
   code {
-		background-color: #f0f0f0;
-		border-radius: 3px;
-		padding: 4px;
-	}
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    padding: 4px;
+  }
 
   section {
     margin: 48px 0;
@@ -136,23 +136,23 @@
 
   section h1 {
     display: inline-block;
-	}
+  }
 
   section h3 {
     color: #304e60;
-	}
+  }
 
   .showcase {
     margin: 48px 0;
     position: relative;
   }
 
-	.example {
+  .example {
     background-color: #fafafa;
     border-radius: 8px;
     padding: 16px 16px 10px;
-		margin-bottom: 40px;
-	}
+    margin-bottom: 40px;
+  }
 
   :global(.example > pre) {
     margin-top: 16px !important;
