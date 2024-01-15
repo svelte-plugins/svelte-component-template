@@ -13,6 +13,10 @@
   "ignorePatterns": ["**/*.snap.js"],
   "overrides": [
     {
+      "files": ["*.ts"],
+      "parser": "@typescript-eslint/parser"
+    },
+    {
       "files": ["*.svelte"],
       "parser": "svelte-eslint-parser"
     }
@@ -21,6 +25,7 @@
     "eqeqeq": "error",
     "no-useless-escape": "off",
     "no-unused-expressions": "off",
+    "no-inner-declarations": "off",
     "no-unused-vars": "off",
     "no-self-assign": "off",
     "no-undef": "off"

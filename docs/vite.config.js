@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import autoprefixer from 'autoprefixer'
+import path from 'path';
 
 export default defineConfig(({ command, mode }) => {
   const isProduction = mode === 'production'
@@ -15,6 +16,12 @@ export default defineConfig(({ command, mode }) => {
           }),
         ],
       },
+    },
+    resolve: {
+      alias: {
+        '@svelte-plugins/svelte-component-template': path.resolve('../', 'src')
+      },
+      extensions: ['.svelte', '.ts', '.js'],
     },
     build: {
       minify: isProduction,

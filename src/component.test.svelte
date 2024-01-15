@@ -6,7 +6,7 @@
    *
    * If your components don't utilize `<slot>`, you can directly import them into the component.test.js file.
    */
-  import Component from './component.svelte';
+  import Component from './Component.svelte';
   /**
    * The slot content.
    *
