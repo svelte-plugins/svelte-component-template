@@ -1,5 +1,5 @@
 import { render } from '@testing-library/svelte';
-import Component from './component.test.svelte';
+import Component from './Component.test.svelte';
 
 describe('Component', () => {
   let TestHarness;
