@@ -99,9 +99,14 @@ If you are looking for a private publish or other types, follow the guide [here]
 - [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
 - [Babel](https://babeljs.io/) - JavaScript compiler that allows next generation JS, today
 - [Prettier](https://prettier.io/) - An opinionated code formatter
+- [Publint](publint.dev) - Lint packaging errors. Ensure compatibility across environments.
 - [ESLint](https://eslint.org/) - A static code analysis tool for finding issues in your code
 - [Husky](https://typicode.github.io/husky/) - Hooks for running linting, formatting, etc when you push or commit
 - [Lint-staged](https://github.com/lint-staged/lint-staged) - Run linters on git staged files
+
+### Publishing
+- [NPM](https://npmjs.com) - Run linters on git staged files
+- [Svelte Package](https://github.com/sveltejs/kit/tree/main/packages/package) - The fastest way to build Svelte packages
 
 ## Changelog
 
