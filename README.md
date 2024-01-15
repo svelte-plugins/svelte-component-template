@@ -67,12 +67,20 @@ Run all tests and generate a code coverage report
 > npm test:coverage
 ```
 
-## Deploying Documentation
+## Documentation
 
-Run the deploy command to automaically build the docs source and push it to `gh-pages`.
+**Building**
+Run the `build:docs` command to generate a dist bundle for GitHub pages.
 
 ```vim
-> npm run deploy
+> npm run build:docs
+```
+
+**Deploying**
+Run the `deploy:docs` command to automaically build the docs source and push it to `gh-pages`.
+
+```vim
+> npm run deploy:docs
 ```
 
 ## Publishing Package
